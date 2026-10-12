@@ -1,0 +1,193 @@
+{
+  "metadata": {
+    "datasetName": "MedSafe Twin Curated Evidence Index",
+    "version": "1.0.0",
+    "purpose": "Academic prototype demonstrating evidence-grounded drug interaction retrieval and Responsible AI verification.",
+    "datasetScope": "Limited demonstration dataset. Not a comprehensive drug safety database. Absence of a matching record must NEVER be interpreted as evidence that a combination is safe.",
+    "lastReviewedDate": "2026-03-15",
+    "verificationSource": "Official FDA Approved Prescribing Information and DailyMed Package Inserts"
+  },
+  "records": [
+    {
+      "evidenceId": "EVID-AML-ATOR-01",
+      "drugA": "amlodipine",
+      "drugB": "atorvastatin",
+      "knownAliases": [
+        "norvasc",
+        "amlodipine besylate",
+        "lipitor",
+        "atorvastatin calcium",
+        "caduet"
+      ],
+      "knownAliasesA": [
+        "norvasc",
+        "amlodipine besylate"
+      ],
+      "knownAliasesB": [
+        "lipitor",
+        "atorvastatin calcium"
+      ],
+      "interactionDescription": "Coadministration of amlodipine (CYP3A4 inhibitor) with atorvastatin (CYP3A4 substrate) increases systemic exposure to atorvastatin by approximately 18%.",
+      "evidenceExplanation": "According to official FDA labeling for Norvasc and Lipitor, amlodipine coadministration with atorvastatin causes a modest elevation in atorvastatin AUC. In elderly patients or those receiving higher statin dosages, increased statin concentrations can elevate the risk of statin-associated muscle symptoms (myalgia, myopathy, or rare rhabdomyolysis).",
+      "clinicalSignificance": "moderate",
+      "recommendedAction": "Prescriber/pharmacist clinical review recommended: Routine co-prescription is common, but patient and caregiver should be educated to monitor and promptly report unexplained muscle tenderness, weakness, or dark urine.",
+      "sourceTitle": "FDA DailyMed Prescribing Information: Norvasc (Amlodipine Besylate Tablets)",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=427092c4-b78f-4cb1-8728-668ff40c49bc",
+      "supportingExcerpt": "Coadministration of multiple 10 mg doses of amlodipine with 80 mg of atorvastatin resulted in no significant change in the steady-state AUC of atorvastatin, but increased atorvastatin exposure by approximately 18%.",
+      "verificationStatus": "verified_authoritative_fda_label",
+      "reviewDate": "2026-03-15"
+    },
+    {
+      "evidenceId": "EVID-LOS-LISI-01",
+      "drugA": "losartan",
+      "drugB": "lisinopril",
+      "knownAliases": [
+        "cozaar",
+        "losartan potassium",
+        "hyzaar",
+        "prinivil",
+        "zestril",
+        "lisinopril"
+      ],
+      "knownAliasesA": [
+        "cozaar",
+        "losartan potassium",
+        "hyzaar"
+      ],
+      "knownAliasesB": [
+        "prinivil",
+        "zestril",
+        "lisinopril"
+      ],
+      "interactionDescription": "Dual renin-angiotensin-aldosterone system (RAAS) blockade with an ARB (losartan) and an ACE inhibitor (lisinopril).",
+      "evidenceExplanation": "Dual blockade of the renin-angiotensin system using ARBs concomitantly with ACE inhibitors increases the risk of symptomatic hypotension, syncope, severe hyperkalemia, and acute renal impairment without providing additive clinical cardiovascular benefit in most elderly patients.",
+      "clinicalSignificance": "major",
+      "recommendedAction": "Immediate clinical reconciliation recommended: Avoid dual RAAS blockade unless specifically directed and monitored by a nephrologist or cardiologist with frequent renal and potassium testing.",
+      "sourceTitle": "FDA DailyMed Prescribing Information: Cozaar (Losartan Potassium Tablets) Section 7.1",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=29381710-86b3-467a-8b1e-b816ba157c79",
+      "supportingExcerpt": "Dual blockade of the RAS with angiotensin receptor blockers, ACE inhibitors, or aliskiren is associated with increased risks of hypotension, syncope, hyperkalemia, and changes in renal function (including acute renal failure) compared to monotherapy.",
+      "verificationStatus": "verified_authoritative_fda_label",
+      "reviewDate": "2026-03-15"
+    },
+    {
+      "evidenceId": "EVID-CLOP-OMEP-01",
+      "drugA": "clopidogrel",
+      "drugB": "omeprazole",
+      "knownAliases": [
+        "plavix",
+        "clopidogrel bisulfate",
+        "prilosec",
+        "prilosec otc",
+        "omeprazole"
+      ],
+      "knownAliasesA": [
+        "plavix",
+        "clopidogrel bisulfate"
+      ],
+      "knownAliasesB": [
+        "prilosec",
+        "prilosec otc",
+        "omeprazole"
+      ],
+      "interactionDescription": "Omeprazole inhibits CYP2C19, significantly reducing the metabolic conversion of clopidogrel to its active antiplatelet metabolite.",
+      "evidenceExplanation": "FDA safety warnings specify that omeprazole significantly decreases clopidogrel's antiplatelet activity, which may diminish clinical efficacy and elevate thrombotic/cardiovascular risk. The FDA recommends avoiding concomitant use.",
+      "clinicalSignificance": "major",
+      "recommendedAction": "Prescriber/pharmacist review recommended: Consider an alternative acid-reducing agent with minimal CYP2C19 inhibition (such as pantoprazole or famotidine) if gastric protection is indicated.",
+      "sourceTitle": "FDA Drug Safety Communication: Clopidogrel (Plavix) & Omeprazole (Prilosec) Interaction / DailyMed Plavix Section 7.1",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=80211158-b64d-4876-b33a-69f88c83a152",
+      "supportingExcerpt": "Omeprazole, a moderate CYP2C19 inhibitor, reduces the pharmacological activity of clopidogrel. Avoid concomitant use of clopidogrel and omeprazole.",
+      "verificationStatus": "verified_authoritative_fda_label",
+      "reviewDate": "2026-03-15"
+    },
+    {
+      "evidenceId": "EVID-WAR-IBU-01",
+      "drugA": "warfarin",
+      "drugB": "ibuprofen",
+      "knownAliases": [
+        "coumadin",
+        "jantoven",
+        "warfarin sodium",
+        "advil",
+        "motrin",
+        "ibuprofen"
+      ],
+      "knownAliasesA": [
+        "coumadin",
+        "jantoven",
+        "warfarin sodium"
+      ],
+      "knownAliasesB": [
+        "advil",
+        "motrin",
+        "ibuprofen"
+      ],
+      "interactionDescription": "Increased risk of major hemorrhage and gastrointestinal ulceration/bleeding.",
+      "evidenceExplanation": "NSAIDs like ibuprofen inhibit platelet cyclooxygenase (COX-1), impairing platelet aggregation and causing gastric mucosal damage, which synergistically increases the risk of severe or fatal gastrointestinal bleeding in patients anticoagulated with warfarin.",
+      "clinicalSignificance": "major",
+      "recommendedAction": "Prescriber/pharmacist review recommended: Avoid concurrent use of over-the-counter NSAIDs with oral anticoagulants. Discuss non-NSAID analgesic alternatives (such as acetaminophen) with healthcare provider.",
+      "sourceTitle": "FDA DailyMed Prescribing Information: Coumadin (Warfarin Sodium Tablets) Section 7.2",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=6e2e50cf-22ef-4d43-8ef1-a4726bfcfbc2",
+      "supportingExcerpt": "Concomitant use of NSAIDs and warfarin increases the risk of severe gastrointestinal bleeding. NSAIDs inhibit platelet aggregation and may cause gastrointestinal mucosal damage.",
+      "verificationStatus": "verified_authoritative_fda_label",
+      "reviewDate": "2026-03-15"
+    },
+    {
+      "evidenceId": "EVID-LISI-SPRO-01",
+      "drugA": "lisinopril",
+      "drugB": "spironolactone",
+      "knownAliases": [
+        "prinivil",
+        "zestril",
+        "lisinopril",
+        "aldactone",
+        "spironolactone"
+      ],
+      "knownAliasesA": [
+        "prinivil",
+        "zestril",
+        "lisinopril"
+      ],
+      "knownAliasesB": [
+        "aldactone",
+        "spironolactone"
+      ],
+      "interactionDescription": "Potassium-sparing diuretic combined with an ACE inhibitor significantly increases risk of hyperkalemia.",
+      "evidenceExplanation": "Both lisinopril and spironolactone reduce aldosterone secretion or action, diminishing renal potassium excretion. Concomitant use can cause severe, life-threatening hyperkalemia, especially in older adults with reduced glomerular filtration.",
+      "clinicalSignificance": "major",
+      "recommendedAction": "Clinical review recommended: If combination is clinically necessary (e.g. heart failure guideline therapy), frequently monitor serum potassium and creatinine within 1-2 weeks of initiation or dose change.",
+      "sourceTitle": "FDA DailyMed Prescribing Information: Prinivil (Lisinopril Tablets) Section 7.3",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f2ce6497-76b6-4b95-a249-16630f6dfcf9",
+      "supportingExcerpt": "Concomitant administration of lisinopril with potassium-sparing diuretics (e.g., spironolactone, triamterene, amiloride) or potassium supplements may lead to significant increases in serum potassium (hyperkalemia).",
+      "verificationStatus": "verified_authoritative_fda_label",
+      "reviewDate": "2026-03-15"
+    },
+    {
+      "evidenceId": "EVID-AML-SIMV-01",
+      "drugA": "amlodipine",
+      "drugB": "simvastatin",
+      "knownAliases": [
+        "norvasc",
+        "amlodipine besylate",
+        "zocor",
+        "simvastatin"
+      ],
+      "knownAliasesA": [
+        "norvasc",
+        "amlodipine besylate"
+      ],
+      "knownAliasesB": [
+        "zocor",
+        "simvastatin"
+      ],
+      "interactionDescription": "Amlodipine inhibits CYP3A4, substantially increasing simvastatin exposure and toxicity risk.",
+      "evidenceExplanation": "Coadministration of amlodipine with simvastatin increases simvastatin peak plasma concentration and AUC by approximately 77%, leading to a dose-dependent risk of skeletal muscle toxicity (rhabdomyolysis). FDA labeling mandates a 20 mg/day simvastatin cap.",
+      "clinicalSignificance": "major",
+      "recommendedAction": "Prescriber review recommended: The maximum recommended dose of simvastatin is 20 mg daily when taken with amlodipine. Consider statin dose reduction or switching to a statin less reliant on CYP3A4 (e.g., rosuvastatin or pravastatin).",
+      "sourceTitle": "FDA DailyMed Prescribing Information: Zocor (Simvastatin Tablets) Section 7.1",
+      "sourceUrl": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=b6df42cb-b1b0-4660-bf88-7505ee36b430",
+      "supportingExcerpt": "Do not exceed 20 mg simvastatin daily when taken concomitantly with amlodipine due to increased risk of myopathy, including rhabdomyolysis.",
+      "verificationStatus": "verified_authoritative_fda_label",
+      "reviewDate": "2026-03-15"
+    }
+  ]
+}

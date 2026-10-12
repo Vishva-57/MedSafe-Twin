@@ -1,0 +1,35 @@
+{
+  "name": "medsafe-twin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MedSafe Twin — Polypharmacy Guardian for Elders (Academic Prototype)",
+  "scripts": {
+    "dev": "npm run dev:server & npm run dev:client",
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "build:client": "npm run build --prefix client",
+    "build:server": "npm run build --prefix server",
+    "build": "npm run build:server && npm run build:client",
+    "start": "npm run start --prefix server"
+  },
+  "keywords": [
+    "polypharmacy",
+    "healthcare",
+    "responsible-ai",
+    "digital-twin",
+    "elder-care",
+    "accessibility",
+    "gemini",
+    "multimodal"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vishva-57/MedSafe-Twin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Vishva-57/MedSafe-Twin/issues"
+  },
+  "homepage": "https://github.com/Vishva-57/MedSafe-Twin#readme",
+  "author": "MedSafe Twin Team",
+  "license": "MIT"
+}
