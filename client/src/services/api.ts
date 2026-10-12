@@ -6,8 +6,8 @@ import {
   PrescriptionExtractionResponse,
 } from '../types/index';
 
-// Base API configuration
-const API_BASE = '/api';
+// Base API configuration (configurable for deployed production backend, defaults to /api)
+const API_BASE = (import.meta.env.VITE_API_BASE_URL || '/api').replace(/\/$/, '');
 
 export interface ApiError extends Error {
   code?: string;
